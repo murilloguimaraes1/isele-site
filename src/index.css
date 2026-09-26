@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-sand-bg: #F4EBDD;
+  --color-sand-section: #EFE4D5;
+  --color-sand-card: #FBF8F2;
+  --color-espresso: #30231C;
+  --color-warm-taupe: #75685D;
+  --color-line: #DED2C2;
+  --color-button: #30231C;
+  --color-button-text: #FFFFFF;
+  --color-reddish: #8C2D2D;
+  --color-reddish-hover: #702020;
+}
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #FBF8F2;
+  background-color: #0D0907;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* 100% Transparent Section Containers to preserve crisp 3D video sharpness without blur or opacity blocking */
+.glass-section-sand {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.glass-section-dark {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.glass-section-footer {
+  background-color: rgba(13, 9, 7, 0.40);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Deep High-Contrast Text Shadows for Maximum Legibility over crisp video background */
+.text-shadow-sand {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.90), 0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.text-shadow-dark {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.98);
+}
+
+/* Fullscreen height utilities using 100dvh for mobile Dynamic Island & Safari address bar compatibility */
+.h-screen-full {
+  height: 100dvh;
+}
+
+.min-h-screen-full {
+  min-height: 100dvh;
+}
+
+.max-h-screen-full {
+  max-height: 100dvh;
+}
+
+/* Natural smooth vertical page flow */
+html {
+  scroll-behavior: smooth;
+  background-color: #0D0907;
+  height: -webkit-fill-available;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  background-color: transparent;
+  color: #FBF8F2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll Snap Alignment on main sections — active on desktop for section alignment, natural touch scroll on mobile */
+@media (min-width: 768px) {
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+}
+@media (max-width: 767px) {
+  .snap-section {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+}
+
+/* Subtle selection */
+::selection {
+  background-color: rgba(140, 45, 45, 0.2);
+  color: #30231C;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0907;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DED2C2;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8C2D2D;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide scrollbar for clean horizontal carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth continuous marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Animated Floating WhatsApp Button FX */
+@keyframes whatsappPulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.6), 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-whatsapp-attention {
+  animation: whatsappPulse 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ATELIER NOVA — ISÉLE",
+  "description": "ISÉLE — Moda feminina atual, elegante e sofisticada. Curadoria de peças que acompanham as tendências.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
