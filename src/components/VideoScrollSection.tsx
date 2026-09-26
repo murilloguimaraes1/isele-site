@@ -249,7 +249,7 @@ export const VideoScrollSection: React.FC<{ onExplore?: () => void }> = ({ onExp
             <span className="w-8 h-[1px] bg-[#FBF8F2]/60" />
             <span className="text-[11px] sm:text-xs font-sans tracking-[0.35em] uppercase text-[#FBF8F2]/90 flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-[#DED2C2]" />
-              ISÉLE ATELIER — MODA FEMININA
+              ISÉLE — MODA FEMININA
             </span>
             <span className="w-8 h-[1px] bg-[#FBF8F2]/60" />
           </div>

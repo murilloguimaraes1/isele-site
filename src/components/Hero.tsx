@@ -18,7 +18,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore }) => {
           <span className="w-5 sm:w-8 h-[1px] bg-[#DED2C2]" />
           <span className="text-[10px] sm:text-xs font-sans tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[#DED2C2] font-semibold flex items-center gap-1.5 sm:gap-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
             <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#DED2C2]" />
-            ISÉLE ATELIER — MODA FEMININA
+            ISÉLE — MODA FEMININA
           </span>
           <span className="w-5 sm:w-8 h-[1px] bg-[#DED2C2]" />
         </div>
